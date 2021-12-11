@@ -92,7 +92,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                    & ~filters.via_bot)
 async def oynat(_, message: Message):
 
-    lel = await message.reply("🔄 **ʟüᴛꜰᴇɴ ʙᴇᴋʟᴇʏɪɴɪᴢ...**")
+    lel = await message.reply("🔄 **Müzik Bulunuyor...**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -153,7 +153,7 @@ async def oynat(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="Grup 🎧",
-                        url="https://t.me/SohbetOdagi")
+                        url="https://t.me/TeamAlmanSexy")
                    
                 ]
             ]
@@ -279,7 +279,7 @@ async def oynat(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png",
-        caption="**🎵 şᴀʀᴋɪ:** {}\n**🕒 ꜱüʀᴇ:** {} min\n**👤 ᴇᴋʟᴇʏᴇɴ:** {}\n\n**#⃣ Kuyruğa Atılmış Konum:** {}".format(
+        caption="**🎵 ŞARKI ISMI:** {}\n**🕒 SÜRE:** {} min\n**👤 OYNATAN:** {}\n\n**#⃣ Kuyruğa Atılmış Konum:** {}".format(
         title, duration, message.from_user.mention(), position
         ),
         reply_markup=keyboard)
@@ -290,7 +290,7 @@ async def oynat(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="**🎵 şᴀʀᴋɪ:** {}\n**🕒 ꜱüʀᴇ:** {} min\n**👤 ᴇᴋʟᴇʏᴇɴ:** {}\n\n**▶️ Şimdi şu anda `{}`...**".format(
+        caption="**🎵 ŞARKI:** {}\n**🕒 SÜRE:** {} min\n**👤 OYNATAN:** {}\n\n**▶️ Şimdi şu anda `{}`...**".format(
         title, duration, message.from_user.mention(), message.chat.title
         ), )
         os.remove("final.png")
