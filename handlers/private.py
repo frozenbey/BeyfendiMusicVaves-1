@@ -11,7 +11,6 @@ async def start(client: Client, message: Message):
     caption="**Merhaba {} 🎵\n Ben {}!\n Sesli sohbetlerde müzik çalabilen botum.\n Ban(kullanıcıları yasaklama) yetkisine gerek olmadan, Sesli sohbetleri yönetme yetkisi, Mesaj silme yetkisi ve Bağlantı ile davet etme verip, Asistanı gruba ekleyiniz.\n Komutlar için /bilgi komutunu kullanın.**").format(
 message.from_user.mention, bot
 ),
-reply_markup=keyboard
     reply_markup=InlineKeyboardMarkup(
             [
                 [
